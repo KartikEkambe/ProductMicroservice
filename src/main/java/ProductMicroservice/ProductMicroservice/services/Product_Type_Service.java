@@ -21,11 +21,13 @@ public class Product_Type_Service {
 	
 	
 	public List<Product_Type>GetAllTypes(){
+		
 		List<Product_Type>lst=typerepository.findAll();
 		List<Product_Type>lst1=new ArrayList<Product_Type>();
 		for(Product_Type t:lst) {
 			t.getCategory();
 			t.getProduct();
+			
 			
 			lst1.add(t);
 		}
